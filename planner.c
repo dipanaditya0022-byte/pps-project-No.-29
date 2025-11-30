@@ -1,21 +1,3 @@
-planner.h
-#ifndef PLANNER_H
-#define PLANNER_H
-
-void addCourseToPlan();
-void displayPlan();
-
-#endif
-
-planner.c
-#include <stdio.h>
-#include <string.h"
-#include "catalog.h"
-#include "prerequisites.h"
-#include "planner.h"
-
-
-// Maintain student's semester plan
 char studentPlan[20][10];
 int planCount = 0;
 
