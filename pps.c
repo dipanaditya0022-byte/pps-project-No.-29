@@ -56,6 +56,7 @@ void loadCatalog(){
 intfindCourseIndex(char code[]){
     for(int i = 0; i<courseCount; i++){
         if(strcmp(catalog[i].code,code) == 0)
+            return i;
     } 
     return -1;
 }
@@ -75,6 +76,27 @@ void displayCatalog(){
         printf("\n");
     }    
 }
+
+// Member 2(Gauransh Rai) - Prerequisite Graph + DFS Cycle Detection
+
+prerequisites.h
+    #indef PREREQUISITES_H
+    #define PREREQUISITES_H
+
+    int checkPrerequisites(char courseCode[]);
+    int detectCycle();
+
+#endif
+
+prerequisites.c
+    #include <stdio.h>
+    #include <string.h>
+    #include "catalog.h"
+    #include "prerequisites.h"
+
+    int visited[MAX_COURSES], recStack[MAX_COURSES];
+
+int dfs(int v){
 
 // Member 4(Aditya Srivastava) - Schedule Checker(Time Conflicts + Overload) //
 
