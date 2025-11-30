@@ -60,5 +60,5 @@ int checkPrerequisites(char courseCode[]) {
     }
     printf("\n");
 
-    return ;
+    return1 ;
 }
