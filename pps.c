@@ -42,7 +42,7 @@ void loadCatalog(){
 
     courseCount = 3;
 }
-intfindCourseIndex(char code[]){
+int findCourseIndex(char code[]){
     for(int i = 0; i<courseCount; i++){
         if(strcmp(catalog[i].code,code) == 0)
             return i;
@@ -61,7 +61,7 @@ void displayCatalog(){
             printf("None");
         } else{
             for(int j = 0; j<catalog[i].numPrereq; j++)
-                printf("%s",catalog[i].Prereq[j]);
+                printf("%s",catalog[i].prereq[j]);
         }
         printf("\n");
     }    
@@ -164,7 +164,7 @@ void checkOverload(){
     printf("\nChecking credit overload...\n");
 int total=0;
 for (int i=0;i<planCount;i++){
-int idx=findCourseindex(StudentPlan[i]);
+int idx=findCourseIndex(studentPlan[i]);
 total+=catalog[idx].creditHours;
 }
 
