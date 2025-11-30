@@ -69,22 +69,7 @@ void displayCatalog(){
 
 
 MEMBER 2(Gauransh Rai) Contribution – Prerequisite Graph + DFS Cycle Detection
-prerequisites.h
-#ifndef PREREQUISITES_H
-#define PREREQUISITES_H
 
-int checkPrerequisites(char courseCode[]);
-int detectCycle();
-
-#endif
-
-prerequisites.c
-#include <stdio.h>
-#include <string.h>
-#include "catalog.h"
-#include "prerequisites.h"
-
-// DFS cycle detection for prerequisites
 int visited[MAX_COURSES], recStack[MAX_COURSES];
 int dfs(int v) {
     visited[v] = 1;
@@ -130,29 +115,12 @@ int checkPrerequisites(char courseCode[]) {
     }
     printf("\n");
 
-    return1 ;
+    return 1 ;
 }
 
 
 MEMBER 3(KASHISH SINGH) Contributuon – Planner: Build Student Semester Plan
-planner.h
-#ifndef PLANNER_H
-#define PLANNER_H
 
-void addCourseToPlan();
-void displayPlan();
-
-#endif
-
-planner.c
-#include <stdio.h>
-#include <string.h"
-#include "catalog.h"
-#include "prerequisites.h"
-#include "planner.h"
-
-
-// Maintain student's semester plan
 char studentPlan[20][10];
 int planCount = 0;
 
