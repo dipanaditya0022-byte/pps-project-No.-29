@@ -1,19 +1,4 @@
-prerequisites.h
-#ifndef PREREQUISITES_H
-#define PREREQUISITES_H
 
-int checkPrerequisites(char courseCode[]);
-int detectCycle();
-
-#endif
-
-prerequisites.c
-#include <stdio.h>
-#include <string.h>
-#include "catalog.h"
-#include "prerequisites.h"
-
-// MEMBER 2 CONTRIBUTION: DFS cycle detection for prerequisites
 int visited[MAX_COURSES], recStack[MAX_COURSES];
 
 int dfs(int v) {
@@ -60,5 +45,5 @@ int checkPrerequisites(char courseCode[]) {
     }
     printf("\n");
 
-    return1 ;
+    return 1 ;
 }
