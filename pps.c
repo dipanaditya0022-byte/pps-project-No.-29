@@ -68,6 +68,7 @@ void displayCatalog(){
 }
 
 
+MEMBER 2(Gauransh Rai) Contribution – Prerequisite Graph + DFS Cycle Detection
 prerequisites.h
 #ifndef PREREQUISITES_H
 #define PREREQUISITES_H
@@ -83,8 +84,7 @@ prerequisites.c
 #include "catalog.h"
 #include "prerequisites.h"
 
-
-// MEMBER 2(GAURANSH RAI) CONTRIBUTION: DFS cycle detection for prerequisites
+// DFS cycle detection for prerequisites
 int visited[MAX_COURSES], recStack[MAX_COURSES];
 int dfs(int v) {
     visited[v] = 1;
