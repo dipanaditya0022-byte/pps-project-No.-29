@@ -1,8 +1,6 @@
 // Member 1(Aditya Sharma ) -Course Catalog and Data Structures
-
-catalog.h
-    #ifndef CATALOG_H
-    #define CATALOG_H
+#include <stdio.h>
+#include <string.h.
 
     #define MAX_COURSES 50
     #define MAX_CODE 10
@@ -13,23 +11,15 @@ typedef struct{
     int creditHours;
     int numPrereq;
     char prereq[MAX_PREREQ][MAX_CODE];
-    int semster;  //1=Fall, 2=Spring etc
+    int semster;  
 }Course;    
 
-extern Course catalog[MAX_COURSES];
-extern int courseCount;
+Course catalog[MAX_COURSES];
+int courseCount=0;
 
 void loadCatalog();
 void displayCatalog();
 int findCourseIndex(char code[]);
-
-#endif
-    catalog.c
-    #include<stdio.h>
-    #include<string.h>
-    #include "catalog.h"
-Course catalog[MAX_COURSES];
-int courseCount = 0;
 
 // LOADS INITIAL CATALOG
 
@@ -68,9 +58,10 @@ void displayCatalog(){
             catalog[i].creditHours,
             catalog[i].semester);
 
-        if(catalog[i].numPrereq == 0) print("None");
-        else{
-            for(intj = 0; j<catalog[i].numprereq; j++)
+        if(catalog[i].numPrereq == 0){
+            print("None");
+        } else{
+            for(int j = 0; j<catalog[i].numprereq; j++)
                 printf("%s",catalog[i].prereq[j]);
         }
         printf("\n");
@@ -100,18 +91,6 @@ int dfs(int v){
 
 // Member 4(Aditya Srivastava) - Schedule Checker(Time Conflicts + Overload) //
 
-#indef SCHEDULE_H
-#define SCHEDULE_H
-
-void checkScheduleConflicts();
-void checkOverload();
-
-#endif
-
-#include <stdio.h>
-#include "catalog.h"
-#include "planner.h"
-
 void checkScheduleConflicts(){
     printf("\nChecking schedule conflicts...\n");
     printf("(Demo) No time conflicts detected.\n");
@@ -120,7 +99,7 @@ void checkScheduleConflicts(){
 void checkOverload(){
     printf("\nChecking credit overload...\n");
 int total=0;
-for(int i=0;i<planCount;i++){
+for (int i=0;i<planCount;i++){
 int idx=findCourseindex(studentPlan[i]);
 total+=catalog[idx].creditHours;
 }
@@ -132,12 +111,6 @@ else
 }
 
 // Member 1(Aditya Sharma) - calls all modules
-
-#include <stdio.h>
-#include "catalog.h"
-#include "prerequisites.h"
-#include "planner.h"
-#include "schedule.h"
 
 int main(){
     loadCatalog();
@@ -165,6 +138,7 @@ case 6: if (detectCycle()) printf("CYCLE DETECTED!\n");
 else printf("No cycles found.\n");
 break;
 case 0: return 0;
-}
-}
+    default: printf("Invalid choice!\n");
+           }
+      }
 }
