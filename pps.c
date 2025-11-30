@@ -119,7 +119,7 @@ int checkPrerequisites(char courseCode[]) {
 }
 
 
-MEMBER 3(KASHISH SINGH) Contributuon – Planner: Build Student Semester Plan
+//MEMBER 3(KASHISH SINGH) Contributuon – Planner: Build Student Semester Plan
 
 char studentPlan[20][10];
 int planCount = 0;
@@ -154,7 +154,7 @@ void displayPlan() {
 }
 
 
-// Member 4(Aditya Srivastava) - Schedule Checker(Time Conflicts + Overload) //
+// Member 4(Aditya Srivastava) - Schedule Checker(Time Conflicts + Overload) 
 void checkScheduleConflicts(){
     printf("\nChecking schedule conflicts...\n");
     printf("(Demo) No time conflicts detected.\n");
