@@ -22,7 +22,6 @@ void displayCatalog();
 int findCourseIndex(char code[]);
 
 // LOADS INITIAL CATALOG
-
 void loadCatalog(){
     strcpy(catalog[0].code,"CS101");
     catalog[0].creditHours = 3;
@@ -205,8 +204,8 @@ else
     pritnf("Credit load OK (%d credits)\n",total);
 }
 
-// Member 1(Aditya Sharma) - calls all modules
 
+// Member 1(Aditya Sharma) - calls all modules
 int main(){
     loadCatalog();
 
