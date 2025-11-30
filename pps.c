@@ -76,7 +76,7 @@ void displayCatalog(){
     }    
 }
 
-// Member 4(Aditya Srivastav) - Schedule Checker(Time Conflicts + Overload) //
+// Member 4(Aditya Srivastava) - Schedule Checker(Time Conflicts + Overload) //
 
 #indef SCHEDULE_H
 #define SCHEDULE_H
