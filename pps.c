@@ -133,6 +133,8 @@ int checkPrerequisites(char courseCode[]) {
     return1 ;
 }
 
+
+MEMBER 3(KASHISH SINGH) Contributuon – Planner: Build Student Semester Plan
 planner.h
 #ifndef PLANNER_H
 #define PLANNER_H
@@ -150,7 +152,7 @@ planner.c
 #include "planner.h"
 
 
-// MEMBER 3(KASHISH SINGH)CONTRIBUTION: Maintain student's semester plan
+// Maintain student's semester plan
 char studentPlan[20][10];
 int planCount = 0;
 
