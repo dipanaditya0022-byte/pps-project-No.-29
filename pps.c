@@ -1,6 +1,6 @@
 // Member 1(Aditya Sharma ) -Course Catalog and Data Structures
 #include <stdio.h>
-#include <string.h.
+#include <string.h>
 
     #define MAX_COURSES 50
     #define MAX_CODE 10
@@ -11,7 +11,7 @@ typedef struct{
     int creditHours;
     int numPrereq;
     char prereq[MAX_PREREQ][MAX_CODE];
-    int semster;  
+    int semester;  
 }Course;    
 
 Course catalog[MAX_COURSES];
@@ -32,7 +32,7 @@ void loadCatalog(){
     catalog[1].creditHours = 4;
     catalog[1].numPrereq = 1;
     strcpy(catalog[1].prereq[0],"CS101");
-    catalog[1].semster = 2;
+    catalog[1].semester = 2;
 
     strcpy(catalog[2].code,"CS201");
     catalog[2].creditHours = 3;
@@ -52,23 +52,23 @@ intfindCourseIndex(char code[]){
 void displayCatalog(){
     printf("\n===== COURSE CATALOG =====\n");
     for(int i = 0; i<courseCount; i++){
-        print(%s(%d credits) | Semester: %d | Prereq: ",
+        printf("%s(%d credits) | Semester: %d | Prereq: ",
             catalog[i].code,
             catalog[i].creditHours,
             catalog[i].semester);
 
         if(catalog[i].numPrereq == 0){
-            print("None");
+            printf("None");
         } else{
-            for(int j = 0; j<catalog[i].numprereq; j++)
-                printf("%s",catalog[i].prereq[j]);
+            for(int j = 0; j<catalog[i].numPrereq; j++)
+                printf("%s",catalog[i].Prereq[j]);
         }
         printf("\n");
     }    
 }
 
 
-MEMBER 2(Gauransh Rai) Contribution – Prerequisite Graph + DFS Cycle Detection
+//MEMBER 2(Gauransh Rai) Contribution – Prerequisite Checks + Cycle Detection
 
 int visited[MAX_COURSES], recStack[MAX_COURSES];
 int dfs(int v) {
@@ -164,14 +164,14 @@ void checkOverload(){
     printf("\nChecking credit overload...\n");
 int total=0;
 for (int i=0;i<planCount;i++){
-int idx=findCourseindex(studentPlan[i]);
+int idx=findCourseindex(StudentPlan[i]);
 total+=catalog[idx].creditHours;
 }
 
 if (total>18)
     printf("WARNING: You are overloaded (%d credits)!\n",total);
 else
-    pritnf("Credit load OK (%d credits)\n",total);
+    printf("Credit load OK (%d credits)\n",total);
 }
 
 
@@ -187,7 +187,7 @@ printf("2. Add Course to Plan\n");
 printf("3. View Student Plan\n");
 printf("4. Check Schedule Conflicts\n");
 printf("5. Check Overload\n");
-printf("2. Detect Cycles in Prerequisites\n");
+printf("6. Detect Cycles in Prerequisites\n");
 printf("0. Exit\n");
 printf("Choice: ");
 scanf("%d", &choice);
