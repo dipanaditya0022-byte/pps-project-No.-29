@@ -108,3 +108,41 @@ if (total>18)
 else
     pritnf("Credit load OK (%d credits)\n",total);
 }
+
+// Member 1(Aditya Sharma) - calls all modules
+
+#include <stdio.h>
+#include "catalog.h"
+#include "prerequisites.h"
+#include "planner.h"
+#include "schedule.h"
+
+int main(){
+    loadCatalog();
+
+int choice;
+while(1){
+printf("\n====COURSE PLANNER MENU====\n");
+printf("1. View Catalog\n");
+printf("2. Add Course to Plan\n");
+printf("3. View Student Plan\n");
+printf("4. Check Schedule Conflicts\n");
+printf("5. Check Overload\n");
+printf("2. Detect Cycles in Prerequisites\n");
+printf("0. Exit\n");
+printf("Choice: ");
+scanf("%d", &choice);
+
+switch (choice){
+case 1: displayCatalog(); break;
+case 2: addCourseToPlan(); break;
+case 3: displayPlan(); break;
+case 4: checkScheduleConflicts(); break;
+case 5: checkOverload(); break;
+case 6: if (detectCycle()) printf("CYCLE DETECTED!\n");
+else printf("No cycles found.\n");
+break;
+case 0: return 0;
+}
+}
+}
