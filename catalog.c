@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h.
+#include <string.h>
 
     #define MAX_COURSES 50
     #define MAX_CODE 10
